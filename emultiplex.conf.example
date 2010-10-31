@@ -1,0 +1,3 @@
+{server_port, 4567}. % Port which will be listened to for incoming stream
+{client_port, 5678}. % Stream will be distributed to clients connecting to this port
+{auth_key, "foobar"}. % Data server should send this string, followed by \n, before the data

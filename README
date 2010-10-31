@@ -1,0 +1,30 @@
+Emultiplexer
+------------
+
+This program accepts data stream on one port and distributes it to clients connecting to another one as it arrives. Useful for live video translations.
+
+Configuration
+-------------
+
+Rename emultiplex.conf.example to emultiplex.conf and edit it.
+
+Running
+-------
+
+Requirements:
+
+* configerl
+
+./emultiplex.sh [config file]
+
+If config file parameter is not supplied, emultiplex.conf is used
+
+Authentication
+--------------
+
+First packet that arrives to socket should be password followed by "\n". `(echo "password" && mystream) | nc myhost myport` works. Note that `echo "password" && echo "payload"` doesn't.
+
+Contact
+-------
+
+voker57@gmail.com
